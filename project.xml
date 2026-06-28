@@ -2,7 +2,7 @@
 <project>
     
     <!-- Metadata -->
-    <meta title="swfwasm" package="g" version="1.0.0" />
+    <meta title="swfwasm" package="g" version="0.1-beta" />
     
     <!-- Entry Point -->
     <app main="Main" path="build" file="Project" />
