@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    
+    <!-- Metadata -->
+    <meta title="swfwasm" package="g" version="1.0.0" />
+    
+    <!-- Entry Point -->
+    <app main="Main" path="build" file="Project" />
+    
+    <!-- Window Settings -->
+    <window width="800" height="600" fps="60" background="0xFFFFFF" />
+    
+    <!-- Source Paths -->
+    <source path="." />
+    
+    <!-- Dependencies -->
+    <haxelib name="lime" />
+    <haxelib name="openfl" />
+    
+</project>
