@@ -11,6 +11,8 @@ class Main {
     // what.
     static var keysPressed:Map<Int, Bool> = new Map<Int, Bool>();
 
+    static var lastTime:Float = 0;
+
     static function main() {
         var stage = Lib.current.stage;
 
@@ -25,7 +27,8 @@ class Main {
 
         stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
         stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
-    
+        
+        lastTime = Lib.getTimer();
         stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
     }
 
@@ -38,6 +41,9 @@ class Main {
     }
 
     static function onEnterFrame(event:Event):Void {
+        var curTime = Lib.getTimer();
+        var dt = (curTime - lastTime) / 1000.0;
+        lastTime = curTime;
         var speed = 5;
         var dx = 0.0;
         var dy = 0.0;
@@ -51,8 +57,8 @@ class Main {
             // math
             var len = Math.sqrt(dx*dx+dy*dy);
 
-            dx = (dx / len) * speed;
-            dy = (dy / len) * speed;
+            dx = (dx / len) * speed * dt * 60;
+            dy = (dy / len) * speed * dt * 60;
 
             shape.x += dx;
             shape.y += dy;
