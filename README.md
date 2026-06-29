@@ -16,4 +16,5 @@ after that run `haxelib run openfl setup`
 
 ## compiling the project
 for the Flash version, run `haxelib run openfl build flash` (output will be in build/flash/bin), if you don't have Adobe Flash Player just use Ruffle
+
 for the Web Assembly version, run `haxelib run openfl build html5 -emscripten` (output will be in build/html5/bin, run index.html)
